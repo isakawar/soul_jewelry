@@ -113,7 +113,10 @@ function displayProducts(productsToShow) {
     productsGrid.innerHTML = productsToShow.map(product => `
         <div class="product-card" data-category="${product.category}">
             <div class="product-image">
-                <i class="fas fa-gem"></i>
+                <img src="${product.image}" alt="${product.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-placeholder" style="display: none;">
+                    <i class="fas fa-gem"></i>
+                </div>
             </div>
             <div class="product-info">
                 <h3 class="product-title">${product.name}</h3>

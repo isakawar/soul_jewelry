@@ -13,7 +13,7 @@ products = [
         "name": "Чокер з натуральними перлинами",
         "category": "chokers",
         "price": 450,
-        "image": "/static/images/choker1.jpg",
+        "image": "/static/images/test_1.jpg",
         "description": "Елегантний чокер з натуральними перлинами ручної роботи",
         "in_stock": True
     },
@@ -22,7 +22,7 @@ products = [
         "name": "Браслет з червоним камінням",
         "category": "bracelets",
         "price": 380,
-        "image": "/static/images/bracelet1.jpg",
+        "image": "/static/images/test_2.jpg",
         "description": "Стильний браслет з червоним камінням та срібними елементами",
         "in_stock": True
     },
@@ -31,7 +31,7 @@ products = [
         "name": "Сережки з срібними сердечками",
         "category": "earrings",
         "price": 320,
-        "image": "/static/images/earrings1.jpg",
+        "image": "/static/images/test_3.jpg",
         "description": "Ніжні сережки з срібними сердечками ручної роботи",
         "in_stock": True
     },
@@ -40,8 +40,17 @@ products = [
         "name": "Комплект з перлин",
         "category": "sets",
         "price": 650,
-        "image": "/static/images/set1.jpg",
+        "image": "/static/images/test_2.jpg",
         "description": "Повний комплект: сережки + браслет + чокер з натуральних перлин",
+        "in_stock": True
+    },
+    {
+        "id": 5,
+        "name": "Ексклюзивний чокер",
+        "category": "chokers",
+        "price": 580,
+        "image": "/static/images/test_3.jpg",
+        "description": "Ексклюзивний чокер з дорогоцінних каменів ручної роботи",
         "in_stock": True
     }
 ]
