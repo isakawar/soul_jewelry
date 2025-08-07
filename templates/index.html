@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soul Jewelry - Авторські прикраси ручної роботи</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>SOUL JEWELRY</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Головна</a></li>
+                    <li><a href="#products" class="nav-link">Прикраси</a></li>
+                    <li><a href="#about" class="nav-link">Про нас</a></li>
+                    <li><a href="#contact" class="nav-link">Контакти</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Авторські прикраси ручної роботи</h1>
+                <p class="hero-subtitle">Елегантні чокери, браслети та сережки з натуральних каменів та перлин</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('products')">
+                        Переглянути колекцію
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('about')">
+                        Дізнатися більше
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-placeholder">
+                    <i class="fas fa-gem"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Наші категорії</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="chokers">
+                    <div class="category-icon">
+                        <i class="fas fa-necklace"></i>
+                    </div>
+                    <h3>Чокери</h3>
+                    <p>Елегантні чокери з натуральних каменів</p>
+                </div>
+                <div class="category-card" data-category="bracelets">
+                    <div class="category-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3>Браслети</h3>
+                    <p>Стильні браслети ручної роботи</p>
+                </div>
+                <div class="category-card" data-category="earrings">
+                    <div class="category-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Сережки</h3>
+                    <p>Ніжні сережки з натуральних матеріалів</p>
+                </div>
+                <div class="category-card" data-category="sets">
+                    <div class="category-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Комплекти</h3>
+                    <p>Повні комплекти для особливих моментів</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Наші прикраси</h2>
+            <div class="products-filter">
+                <button class="filter-btn active" data-category="all">Всі</button>
+                <button class="filter-btn" data-category="chokers">Чокери</button>
+                <button class="filter-btn" data-category="bracelets">Браслети</button>
+                <button class="filter-btn" data-category="earrings">Сережки</button>
+                <button class="filter-btn" data-category="sets">Комплекти</button>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Про Soul Jewelry</h2>
+                    <p>Ми створюємо унікальні прикраси ручної роботи з натуральних каменів та перлин. Кожна прикраса - це витвір мистецтва, створений з любов'ю та увагою до деталей.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <h3>Ручна робота</h3>
+                            <p>Кожна прикраса створюється вручну з особливою увагою до деталей</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-gem"></i>
+                            <h3>Натуральні матеріали</h3>
+                            <p>Використовуємо тільки натуральні камені та перлини найвищої якості</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <h3>Унікальність</h3>
+                            <p>Кожна прикраса унікальна та неповторна</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Зв'яжіться з нами</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Телефон</h3>
+                            <p>+380 99 123 45 67</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@souljewelry.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <div>
+                            <h3>Instagram</h3>
+                            <p>@soul_jeweelry</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Ваше ім'я" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Ваш email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Ваше повідомлення" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Надіслати</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Кошик</h2>
+                <button class="modal-close" id="closeCart">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems">
+                    <!-- Cart items will be loaded here -->
+                </div>
+                <div class="cart-total">
+                    <h3>Загальна сума: <span id="cartTotal">0</span> грн</h3>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="clearCart">Очистити кошик</button>
+                <button class="btn btn-primary" id="checkout">Оформити замовлення</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Soul Jewelry</h3>
+                    <p>Авторські прикраси ручної роботи з натуральних матеріалів</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Категорії</h3>
+                    <ul>
+                        <li><a href="#products">Чокери</a></li>
+                        <li><a href="#products">Браслети</a></li>
+                        <li><a href="#products">Сережки</a></li>
+                        <li><a href="#products">Комплекти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакти</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +380 99 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> info@souljewelry.com</li>
+                        <li><i class="fab fa-instagram"></i> @soul_jeweelry</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Soul Jewelry. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
